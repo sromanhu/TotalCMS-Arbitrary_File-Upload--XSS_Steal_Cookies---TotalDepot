@@ -1,26 +1,23 @@
-# CMSmadesimple File Upload - XSS v2.2.18
+# TotalCMS Arbitrary File Upload - XSS and steal cookies
 
 ## Author: (Sergio)
 
-**Description:** File upload vulnerability in CMSmadesimple v.2.2.18 allows a local attacker to upload a pdf file with hidden XSS.
+**Description:** TotalCMS is affected by Arbitrary File Upload - XSS vulnerability which allows Cross-Site Scriting (XSS) and also stealing session cookies
 
-**Attack Vectors:** A vulnerability in File Manager file upload sanitation allows you to upload a PDF file with hidden XSS.
+**Attack Vectors:** A vulnerability in "Total Depot" file upload sanitation allows you to upload a PDF / SVG /HTML file with hidden alert Cross-Site scripting (XSS) and steal the user cookies.
 
 ---
 
-### POC:
+### POC XSS PDF/SVG/HTML:
 
 
-When logging into the panel, we will go to the "Content- File Manager." section off General Menu.
-
-![XSS pdf file upload](https://github.com/sromanhu/CMSmadesimple-File-Upload--XSS---File-Manager/assets/87250597/8274bb28-3e8c-4118-9241-33970ca1e9f3)
+When logging into the admin panel (https://www.totalcms.co/demo/total-cms/admin/), we will go to the "Total Depot" off the Administration Site and we upload the PDF file with the hidden XSS and we see that we can execute it and the XSS appears.
 
 
-We upload the PDF file with the hidden XSS and we see that we can execute it and the Reflected XSS appears.
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/59567372-3336-4efd-aa24-2293ee2018c3)
 
 
-![XSS pdf file upload resultado](https://github.com/sromanhu/CMSmadesimple-File-Upload--XSS---File-Manager/assets/87250597/d1bbaad5-96a4-4377-a514-3e271b2fc7de)
-
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/1f2050a8-008c-4002-aeda-8ec4ecb3a406)
 
 
 
@@ -28,6 +25,6 @@ We upload the PDF file with the hidden XSS and we see that we can execute it and
 </br>
 
 ### Additional Information:
-http://www.cmsmadesimple.org/
+[http://www.cmsmadesimple.org/](https://www.totalcms.co/)
 
 https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
