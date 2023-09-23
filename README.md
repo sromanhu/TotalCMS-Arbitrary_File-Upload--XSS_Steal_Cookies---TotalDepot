@@ -101,6 +101,7 @@ We continue with the second PoC:
 ### - POC 2: Theft of user cookies and forwarding to an external server to intercept them and impersonate the user.
 
 We are going to pretend that we are a cybercriminal and we are going to steal the user's session cookies and they will be sent to the server.
+
 In this case I have uploaded a file as PoC but in a real case, we can upload a file with an interesting name "NBA Tickets" and publish it, so that the victim user sends me the cookies when executing the file, without realizing it. of it.
 
 
