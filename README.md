@@ -21,6 +21,7 @@ We start with the first PoC:
 
 When logging into the admin panel (https://www.totalcms.co/demo/total-cms/admin/), we will go to the "Total Depot" off the Administration Site and we upload the PDF/ SVG/ and HTML files with the hidden XSS.
 
+
 There is the payloads:
 
 ### XSS PDF Payload:
@@ -67,6 +68,7 @@ Once uploaded, if we click on the link we can see the path where they are stored
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/eedf4cdb-6401-4e64-8cab-479f9cedfcec)
 
+
 PATH:
 
 
@@ -79,7 +81,9 @@ PATH:
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/8a1be3fe-bbb8-47e3-8d4f-5933df2af82a)
 
 
+
 And this is the result with the Cross-Site Scripting (XSS) of the 3 types of files and with the user's cookies:
+
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/f5ef6c07-c3ee-44fd-b999-266a654d8d29)
 
@@ -93,9 +97,11 @@ And this is the result with the Cross-Site Scripting (XSS) of the 3 types of fil
 
 We continue with the second PoC:
 
+
 ### - POC 2: Theft of user cookies and forwarding to an external server to intercept them and impersonate the user.
 
 We perform a test to see if we have communication with an external server.
+
 
 There is the payload:
 
@@ -128,6 +134,7 @@ alert("XSS");
 
 As we see in the pipedream Request, we have obtained the request correctly.
 
+
 We modify the payload to steal cookies and send them to the pipedream Request, so that we can impersonate the user.
 There is the payload:
 
@@ -151,7 +158,7 @@ xml:space="preserve">
   });
 </script>   
 </svg>
-
+```
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/f4ac2d48-f957-4c5d-a173-053ba3097aec)
 
