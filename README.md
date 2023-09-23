@@ -100,6 +100,10 @@ We continue with the second PoC:
 
 ### - POC 2: Theft of user cookies and forwarding to an external server to intercept them and impersonate the user.
 
+We are going to pretend that we are a cybercriminal and we are going to steal the user's session cookies and they will be sent to the server.
+In this case I have uploaded a file as PoC but in a real case, we can upload a file with an interesting name "NBA Tickets" and publish it, so that the victim user sends me the cookies when executing the file, without realizing it. of it.
+
+
 We perform a test to see if we have communication with an external server.
 
 
@@ -165,17 +169,29 @@ xml:space="preserve">
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/f4ac2d48-f957-4c5d-a173-053ba3097aec)
 
 
-![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/278638ac-2794-4c88-a165-01914e18d449)
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/a6dae6e1-d139-4aa7-8d02-f62fea31232e)
+
 
 
 As we see in the image, we have correctly obtained the user's session cookies.
 
 
+Now we are going to impersonate the user. To test it, we open a session to TotalCMS/admin in another browser and open the "Cookie Editor" addon.
+
+
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/00cd865a-e329-496e-ac26-24970fe4b617)
+
+
+We modify the session cookie to the one obtained in pipestream and save.
+
+
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/2d9a2f2b-7c82-41a1-b7bb-0e778bf33b9d)
 
 
 
+We reloaded the website and we have impersonated the administrator user.
 
-
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/7eaf4ac6-3725-4351-a4d6-9b2a92a93922)
 
 
 
@@ -185,6 +201,6 @@ As we see in the image, we have correctly obtained the user's session cookies.
 </br>
 
 ### Additional Information:
-[http://www.cmsmadesimple.org/](https://www.totalcms.co/)
+https://www.totalcms.co/
 
 https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
