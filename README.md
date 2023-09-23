@@ -144,7 +144,7 @@ As we see in the pipedream Request, we have obtained the request correctly.
 <br>
 We modify the payload to steal cookies and send them to the pipedream Request, so that we can impersonate the user.
 
-
+<br>
 
 There is the payload:
 
@@ -185,6 +185,7 @@ We execute it:
 As we see in the image, we have correctly obtained the user's session cookies.
 
 
+<br>
 Now we are going to impersonate the user. To test it, we open a session to TotalCMS/admin in another browser and open the "Cookie Editor" addon.
 
 
