@@ -8,16 +8,18 @@
 
 ---
 
-### POC XSS PDF/SVG/HTML:
+### POC XSS - PDF/ SVG/ HTML:
 
 
-When logging into the admin panel (https://www.totalcms.co/demo/total-cms/admin/), we will go to the "Total Depot" off the Administration Site and we upload the PDF file with the hidden XSS and we see that we can execute it and the XSS appears.
+When logging into the admin panel (https://www.totalcms.co/demo/total-cms/admin/), we will go to the "Total Depot" off the Administration Site and we upload the PDF/ SVG/ and HTML files with the hidden XSS.
 
 
 ![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/59567372-3336-4efd-aa24-2293ee2018c3)
 
 
-![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/1f2050a8-008c-4002-aeda-8ec4ecb3a406)
+
+![image](https://github.com/sromanhu/TotalCMS-Arbitrary_File-Upload--XSS_Steal_Cookies---TotalDepot/assets/87250597/bfbddc70-9021-4fdb-9ed5-63eed29f25ce)
+
 
 
 
