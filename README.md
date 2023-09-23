@@ -104,8 +104,7 @@ We are going to pretend that we are a cybercriminal and we are going to steal th
 
 In this case I have uploaded a file as PoC but in a real case, we can upload a file with an interesting name "NBA Tickets" and publish it, so that the victim user sends me the cookies when executing the file, without realizing it. of it.
 
-
-
+<br>
 
 Firs of all, we perform a test to see if we have communication with an external server.
 
